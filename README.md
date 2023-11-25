@@ -1,4 +1,4 @@
-# Proyecto: Test de Personalidad Tim Burton
+# Proyecto: Test de Personalidad Tim Burton 🎬
 ![](https://www.canalcosmo.es/upload/fotos/noticias/gra_3611.jpg?time=1472122770047)
 
 Este proyecto es un divertido test de personalidad inspirado en el peculiar y oscuro mundo de Tim Burton. Utilizando tecnologías web modernas como React y estilos Sass, el Test de Personalidad Tim Burton te ayudará a descubrir a qué personaje del universo de Tim Burton te pareces más. 🎭
