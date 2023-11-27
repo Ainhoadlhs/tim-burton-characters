@@ -12,10 +12,11 @@ body{
     background-color: #000000;
 }
 
-.body{
+.body {
     display: grid;
     grid-template-rows: 0.5fr 1fr auto; 
     min-height: 100vh;
+    position: relative;
 }
 
 .main {
@@ -143,7 +144,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     flex-direction: column;
     &__div {
         display: flex;
@@ -273,6 +274,7 @@ body{
                     display: none;
                     cursor: pointer;
                     font-family: 'Gothic A1', sans-serif;
+                    pointer-events: none;
                     &:checked + .questions__div--div--label {
                         font-weight: 600;
                         cursor: pointer;
@@ -366,13 +368,17 @@ body{
         }
 
         .footer{
+            position: absolute;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 1rem;
             padding-inline: 5rem;
+            margin-top: 2rem;
             height: 7rem;
+            width: 100%;
             background-color: rgb(55, 55, 55);
             @media (min-width: 768px){
                 flex-direction: row;
