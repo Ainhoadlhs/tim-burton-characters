@@ -195,6 +195,7 @@ body{
     flex-direction: column;
     align-items: center;
     font-size: 2.5rem;
+
     &__div {
         background-color: #a3bada ;
         margin-bottom: 30px;
@@ -210,19 +211,21 @@ body{
         align-items: center;
         flex-direction: column;
         margin-top: 2rem;
-        @media (min-width: 600px){
+
+        @media (min-width: 600px) {
             width: 40rem;
         }
-        @media (min-width: 768px){
+        @media (min-width: 768px) {
             width: 60rem;
         }
-        @media (min-width: 1250px){
+        @media (min-width: 1250px) {
             width: 75rem;
         }
-        @media (min-width: 1800px){
+        @media (min-width: 1800px) {
             width: 90rem;
         }
-            &--p {
+
+        &--p {
             font-size: 1.5rem;
             font-weight: bold;
             margin-top: 1rem;
@@ -230,25 +233,27 @@ body{
             text-align: center;
             font-family: 'Gothic A1', sans-serif;
             font-weight: 600;
-            text-shadow: 0.025rem 0.025rem 1.5rem #ba5fbaa5, 
-            0.025rem -0.025rem 1.5rem #ba5fbaa5, 
-            -0.025rem 0.025rem 1.5rem #ba5fbaa5, 
-            -0.025rem -0.025rem 1.5rem #ba5fbaa5, 
-            0.025rem 0 0.2rem #ba5fbaa5, 
-            -0.025rem 0 0.2rem #ba5fbaa5, 
-            0 0.025rem 0.5rem #ba5fbaa5, 
-            0 -0.025rem 0.5rem #ba5fbaa5;
-            @media (min-width: 768px){
+            text-shadow: 0.025rem 0.025rem 1.5rem #ba5fbaa5,
+                            0.025rem -0.025rem 1.5rem #ba5fbaa5,
+                            -0.025rem 0.025rem 1.5rem #ba5fbaa5,
+                            -0.025rem -0.025rem 1.5rem #ba5fbaa5,
+                            0.025rem 0 0.2rem #ba5fbaa5,
+                            -0.025rem 0 0.2rem #ba5fbaa5,
+                            0 0.025rem 0.5rem #ba5fbaa5,
+                            0 -0.025rem 0.5rem #ba5fbaa5;
+
+            @media (min-width: 768px) {
                 font-size: 2rem;
             }
-            @media (min-width: 1024px){
-            font-size: 2.5rem;
+            @media (min-width: 1024px) {
+                font-size: 2.5rem;
             }
-            @media (min-width: 1600px){
+            @media (min-width: 1600px) {
                 font-size: 3.5rem;
             }
-            }
-            &--div {
+        }
+
+        &--div {
             margin-top: 10px;
             display: flex;
             justify-content: center;
@@ -264,45 +269,57 @@ body{
             border: #ffffff 5px double;
             border-top-right-radius: 15px;
             border-bottom-left-radius: 15px;
-                &:hover{
+
+            &:hover {
+                background-color: #ba5fbaa5;
+                cursor: pointer;
+                box-shadow: 0.05rem 0.05rem 1rem #fff, 0.05rem -0.05rem 1rem #f5f5f5, -0.05rem 0.05rem 1.5rem #fff, -0.05rem -0.05rem 1.5rem #f5f5f5, 0.05rem 0 0.5rem #fff, -0.05rem 0 0.5rem #f5f5f5, 0 0.05rem 2rem #fff, 0 -0.05rem 2rem #f5f5f5;
+            }
+
+            &--input {
+                margin-right: 10px;
+                display: none;
+                cursor: pointer;
+                pointer-events: none; /* Evitar interacción con el elemento */
+
+                &:checked + .questions__div--div--label {
+                    font-weight: 600;
+                    cursor: pointer;
+                    border-top-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
                     background-color: #ba5fbaa5;
-                    cursor: pointer;
-                    box-shadow: 0.05rem 0.05rem 1rem #fff, 0.05rem -0.05rem 1rem #f5f5f5, -0.05rem 0.05rem 1.5rem #fff, -0.05rem -0.05rem 1.5rem #f5f5f5, 0.05rem 0 0.5rem #fff, -0.05rem 0 0.5rem #f5f5f5, 0 0.05rem 2rem #fff, 0 -0.05rem 2rem #f5f5f5;
                 }
-                &--input {
-                    margin-right: 10px;
-                    display: none;
-                    cursor: pointer;
-                    font-family: 'Gothic A1', sans-serif;
-                    pointer-events: none;
-                    &:checked + .questions__div--div--label {
-                        font-weight: 600;
-                        cursor: pointer;
-                        border-top-right-radius: 10px;
-                        border-bottom-left-radius: 10px;
-                        background-color: #ba5fbaa5;
-                    }
-                    }
-                &--label {
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    width: 100%;
-                    &:hover{
-                        font-weight: 600;
-                    }
-                    @media (min-width: 768px){
-                        font-size: 2rem;
-                    }
-                    @media (min-width: 1024px){
-                        font-size: 2rem;
-                    }
+            }
+
+            &--label {
+                font-size: 1.5rem;
+                cursor: pointer;
+                width: 100%;
+
+                &:hover {
+                    font-weight: 600;
                 }
 
-        }
+                @media (min-width: 768px) {
+                    font-size: 2rem;
+                }
+                @media (min-width: 1024px) {
+                    font-size: 2rem;
+                }
 
+                /* Estilos cuando el input está marcado */
+                & + .questions__div--div--label {
+                    font-weight: 600;
+                    cursor: pointer;
+                    border-top-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    background-color: #ba5fbaa5;
+                }
+            }
         }
-
     }
+}
+
 
     .btnStart{
         display:inline-block;
